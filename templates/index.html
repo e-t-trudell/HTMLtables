@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="npm i bootstrap@5.2.0">
+    <title>HTML Tables</title>
+</head>
+<body>
+    <h2>Catchphrase</h2>
+    <table>
+        <head>
+            <tr>
+                <!-- key -->
+                <th>First Name</th>
+                <!-- key -->
+                <th>Last Name</th>
+                <th>Full Name</th>
+            </tr>
+        </head>
+        <tbody>
+            {%for list in list%}
+                <tr>
+                    <td class='name'>{{list['first_name']}}</td>
+                    <td class='name'>{{list['last_name']}}</td>
+                    <td class='name'>{{list['first_name']}} {{list['last_name']}}</td>
+                </tr>
+            {%endfor%}
+            
+        </tbody>
+    </table>
+</body>
+</html>
